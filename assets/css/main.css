@@ -155,8 +155,8 @@ input, select, textarea {
 	}
 
 	strong, b {
-		font-weight: 700;
-		color: #000000;
+		font-weight: 1000;
+		color: #666;
 	}
 
 	em, i {
@@ -203,6 +203,7 @@ input, select, textarea {
 	}
 
 	p, ul, ol, dl, table {
+		font-size: 1em;
 		margin-bottom: 2em;
 	}
 
@@ -221,7 +222,7 @@ input, select, textarea {
 		@media screen and (min-width: 961px) and (max-width: 1880px) {
 
 			.container {
-				width: 1200px;
+				width: 1050px;
 			}
 
 		}
@@ -229,7 +230,7 @@ input, select, textarea {
 		@media screen and (min-width: 961px) and (max-width: 1620px) {
 
 			.container {
-				width: 960px;
+				width: 1050px;
 			}
 
 		}
@@ -1757,7 +1758,7 @@ input, select, textarea {
 		.image.avatar48 {
 			width: 100px;
 			height: 100px;
-			background: #f00;
+			background: rgb(255, 255, 255);
 		}
 
 			.image.avatar48 img {
@@ -2277,20 +2278,20 @@ input, select, textarea {
 
 		/* Header */
 
-			#header {
-				width: 300px;
+			#header {                                                          /* lebar panel kiri */
+				width: 340px;
 			}
 
 		/* Footer */
 
 			#footer {
-				margin-left: 300px;
+				margin-left: 340px;
 			}
 
 		/* Main */
 
 			#main {
-				margin-left: 300px;
+				margin-left: 340px;
 			}
 
 	}
@@ -2671,6 +2672,40 @@ input, select, textarea {
 	color: #666;
 }
 
+@media screen and (min-width: 961px) and (max-width: 1880px) {
+
+			.edu-card {
+				text-align: center;
+				max-width: 100px;
+				display: flex;
+				flex-direction: column;
+				align-items: center; /* ini bikin logo dan tulisan rata tengah */
+			}
+
+			.edu-logo {
+				width: 140px;
+				height: auto;
+				margin-bottom: 1rem;
+			}
+
+			.edu-logo.itb {
+				width: 160px; /* khusus logo ITB */
+			}
+
+			.edu-card h3 {
+				font-size: 1.5rem;
+				margin: 0.5rem 0;
+				white-space: nowrap;
+			}
+
+			.edu-card p {
+				font-size: 1.2rem;
+				color: #666;
+			}
+}
+
+
+
 
 .experience-row {
   display: flex;
@@ -2686,9 +2721,10 @@ input, select, textarea {
 
 .experience-img img {
   width: 250px;
-  max-width: 450px;
+  max-width: 400px;
   border-radius: 12px;
 }
+
 
 .experience-text {
   flex: 1;
@@ -2722,6 +2758,49 @@ input, select, textarea {
 	font-size: 0.8em;
 	color: #666; /* bisa diganti sesuai tema */
 
+}
+
+@media screen and (min-width: 961px) and (max-width: 1880px) {
+	
+		.experience-img img {
+			width: 200px;
+			max-width: 400px;
+			border-radius: 12px;
+		}
+
+		.experience-text {
+			flex: 1;
+			text-align: left; /* pastikan rata kiri */
+			}
+
+			.experience-text h3 {
+			font-size: 1.9rem;
+			margin-bottom: 1rem;
+			}
+
+			.experience-text p {
+			font-size: 1rem;
+			line-height: 1.6;
+			margin-bottom: 1.5rem;
+			}
+
+			.experience-header {
+				display: flex;
+				justify-content: space-between; /* judul di kiri, tahun di kanan */
+				align-items: center;
+			}
+
+			.experience-header h3 {
+				margin: 0;
+				font-size: 1.1em;
+				font-weight: bold;
+			}
+
+			.experience-year {
+				font-size: 0.7em;
+				color: #666; /* bisa diganti sesuai tema */
+
+			}
 }
 
 .experience-text .button {
@@ -2816,4 +2895,85 @@ input, select, textarea {
 .img-container:hover .see-more {
   opacity: 1; /* tombol muncul */
 }
+
+
+/* Responsive untuk Education */
+	@media screen and (max-width: 960px) {
+		.education-grid {
+			gap: 4rem; /* perkecil jarak di laptop/layar sedang */
+			}
+		}
+
+		@media screen and (max-width: 736px) {
+		.education-grid {
+			flex-direction: column; /* stack ke bawah */
+			align-items: center;
+			gap: 2rem;
+		}
+
+		.edu-card {
+			max-width: 90%;
+		}
+
+		.edu-logo {
+			width: 120px;
+		}
+
+		.edu-logo.itb {
+			width: 140px;
+		}
+
+		.edu-card h3 {
+			font-size: 1.5rem;
+		}
+
+		.edu-card p {
+			font-size: 1.2rem;
+		}
+	}
+
+/* --- Responsive fix for avatar + name --- */
+	@media screen and (max-width: 960px) {
+
+		#logo {
+			display: flex;
+			flex-direction: column;  /* Avatar dan nama jadi vertikal */
+			align-items: center;
+			text-align: center;
+		}
+
+		.image.avatar48,
+		.image.avatar48 img {
+			width: 80px;
+			height: 80px;
+		}
+
+		#logo #title {
+			font-size: 1.5rem;
+			margin-top: 0.5rem;
+		}
+
+		#logo p {
+			font-size: 1rem;
+		}
+	}
+
+	@media screen and (max-width: 736px) {
+
+		.image.avatar48,
+		.image.avatar48 img {
+			width: 70px;
+			height: 70px;
+		}
+
+		#logo #title {
+			font-size: 1.3rem;
+		}
+
+		#logo p {
+			font-size: 0.9rem;
+		}
+	}
+
+
 
