@@ -2048,7 +2048,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #536878 url("images/overlay.png");                            /* warna kotak sebelah kiri */
+		background: #0d1537 url("images/overlay.png");                            /* warna kotak sebelah kiri */
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(7, 7, 60, 0.385);
 		color: #fff;
 		height: 100%;
